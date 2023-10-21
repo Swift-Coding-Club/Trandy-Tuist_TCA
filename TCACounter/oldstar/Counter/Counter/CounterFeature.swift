@@ -17,7 +17,7 @@ struct CounterFeature: Reducer {
         var isTimerRunning = false
     }
     
-    enum Action {
+    enum Action: Equatable {
         case decrementButtonTapped
         case incrementButtonTapped
         case factButtonTapped
@@ -27,6 +27,8 @@ struct CounterFeature: Reducer {
     }
     
     enum CancelID { case timer }
+    
+    @Dependency(\.continuousClock) var clock
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
