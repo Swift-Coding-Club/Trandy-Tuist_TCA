@@ -20,6 +20,7 @@ struct CounterFeature: Reducer {
         case decrementButtonTapped
         case incrementButtonTapped
         case factButtonTapped
+        case factResponse(String)
     }
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
@@ -36,13 +37,17 @@ struct CounterFeature: Reducer {
             state.fact = nil
             state.isLoading = true
             
-            let (data, _) = try await URLSession.shared
-                .data(from: URL(string: "http://numbersapi.com/\(state.count)")!)
-            // async도 reduce 함수에서 지원을 안 하네요?
-            // 에러 핸들링은 안 돼 있습니다
-            
-            state.fact = String(decoding: data, as: UTF8.self)
-            
+            return .run { [count = state.count] send in
+                let (data, _) = try await URLSession.shared
+                    .data(from: URL(string: "http://numbersapi.com/\(count)")!)
+                let fact = String(decoding: data, as: UTF8.self)
+                await send(.factResponse(fact))
+            } catch: { error, send in
+                print(error)
+            }
+        case let .factResponse(fact):
+            state.fact = fact
+            state.isLoading = false
             return .none
         }
     }
