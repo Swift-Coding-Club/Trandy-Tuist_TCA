@@ -11,6 +11,8 @@
 		4F2EF5262AE3B05A0048634E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2EF5252AE3B05A0048634E /* ContentView.swift */; };
 		4F2EF5282AE3B05B0048634E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2EF5272AE3B05B0048634E /* Assets.xcassets */; };
 		4F2EF52B2AE3B05B0048634E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2EF52A2AE3B05B0048634E /* Preview Assets.xcassets */; };
+		4F2EF5332AE3B2F60048634E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2EF5322AE3B2F60048634E /* ComposableArchitecture */; };
+		4F2EF5352AE3B3080048634E /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2EF5342AE3B3080048634E /* CounterFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		4F2EF5252AE3B05A0048634E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F2EF5272AE3B05B0048634E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F2EF52A2AE3B05B0048634E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4F2EF5342AE3B3080048634E /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2EF5332AE3B2F60048634E /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +57,7 @@
 			children = (
 				4F2EF5232AE3B05A0048634E /* CounterApp.swift */,
 				4F2EF5252AE3B05A0048634E /* ContentView.swift */,
+				4F2EF5342AE3B3080048634E /* CounterFeature.swift */,
 				4F2EF5272AE3B05B0048634E /* Assets.xcassets */,
 				4F2EF5292AE3B05B0048634E /* Preview Content */,
 			);
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = Counter;
+			packageProductDependencies = (
+				4F2EF5322AE3B2F60048634E /* ComposableArchitecture */,
+			);
 			productName = Counter;
 			productReference = 4F2EF5202AE3B05A0048634E /* Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 4F2EF5172AE3B05A0048634E;
+			packageReferences = (
+				4F2EF5312AE3B2F60048634E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 4F2EF5212AE3B05A0048634E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2EF5352AE3B3080048634E /* CounterFeature.swift in Sources */,
 				4F2EF5262AE3B05A0048634E /* ContentView.swift in Sources */,
 				4F2EF5242AE3B05A0048634E /* CounterApp.swift in Sources */,
 			);
@@ -344,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F2EF5312AE3B2F60048634E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F2EF5322AE3B2F60048634E /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F2EF5312AE3B2F60048634E /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4F2EF5182AE3B05A0048634E /* Project object */;
 }
