@@ -14,6 +14,7 @@ struct CounterFeature: Reducer {
         var count = 0
         var fact: String?
         var isLoading = false
+        var isTimerRunning = false
     }
     
     enum Action {
@@ -21,7 +22,11 @@ struct CounterFeature: Reducer {
         case incrementButtonTapped
         case factButtonTapped
         case factResponse(String)
+        case toggleTimerButtonTapped
+        case timerTick
     }
+    
+    enum CancelID { case timer }
     
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
@@ -48,6 +53,24 @@ struct CounterFeature: Reducer {
         case let .factResponse(fact):
             state.fact = fact
             state.isLoading = false
+            return .none
+        case .toggleTimerButtonTapped:
+            state.isTimerRunning.toggle()
+            
+            if state.isTimerRunning {
+                return .run { send in
+                    while true {
+                        try await Task.sleep(for: .seconds(1))
+                        await send(.timerTick)
+                    }
+                }
+                .cancellable(id: CancelID.timer)
+            } else {
+                return .cancel(id: CancelID.timer)
+            }
+        case .timerTick:
+            state.count += 1
+            state.fact = nil
             return .none
         }
     }
