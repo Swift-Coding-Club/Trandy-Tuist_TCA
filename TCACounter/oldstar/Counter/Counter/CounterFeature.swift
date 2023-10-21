@@ -8,7 +8,7 @@
 import ComposableArchitecture
 
 struct CounterFeature: Reducer {
-    struct State {
+    struct State: Equatable {
         var count = 0
     }
     
