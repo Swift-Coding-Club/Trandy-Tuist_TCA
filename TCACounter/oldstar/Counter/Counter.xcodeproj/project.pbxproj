@@ -13,7 +13,19 @@
 		4F2EF52B2AE3B05B0048634E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2EF52A2AE3B05B0048634E /* Preview Assets.xcassets */; };
 		4F2EF5332AE3B2F60048634E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 4F2EF5322AE3B2F60048634E /* ComposableArchitecture */; };
 		4F2EF5352AE3B3080048634E /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2EF5342AE3B3080048634E /* CounterFeature.swift */; };
+		4FA18F572AE446EA00403E5B /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA18F562AE446EA00403E5B /* CounterFeatureTests.swift */; };
+		4FA18F5D2AE4476000403E5B /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2EF5342AE3B3080048634E /* CounterFeature.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FA18F582AE446EA00403E5B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F2EF5182AE3B05A0048634E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F2EF51F2AE3B05A0048634E;
+			remoteInfo = Counter;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4F2EF5202AE3B05A0048634E /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,6 +35,8 @@
 		4F2EF52A2AE3B05B0048634E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F2EF5342AE3B3080048634E /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 		4F2EF5362AE3C3990048634E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4FA18F542AE446EA00403E5B /* CounterFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterFeatureTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FA18F562AE446EA00403E5B /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +48,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FA18F512AE446EA00403E5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				4F2EF5222AE3B05A0048634E /* Counter */,
+				4FA18F552AE446EA00403E5B /* CounterFeatureTests */,
 				4F2EF5212AE3B05A0048634E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				4F2EF5202AE3B05A0048634E /* Counter.app */,
+				4FA18F542AE446EA00403E5B /* CounterFeatureTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +97,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4FA18F552AE446EA00403E5B /* CounterFeatureTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FA18F562AE446EA00403E5B /* CounterFeatureTests.swift */,
+			);
+			path = CounterFeatureTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -97,6 +128,24 @@
 			productReference = 4F2EF5202AE3B05A0048634E /* Counter.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4FA18F532AE446EA00403E5B /* CounterFeatureTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FA18F5C2AE446EA00403E5B /* Build configuration list for PBXNativeTarget "CounterFeatureTests" */;
+			buildPhases = (
+				4FA18F502AE446EA00403E5B /* Sources */,
+				4FA18F512AE446EA00403E5B /* Frameworks */,
+				4FA18F522AE446EA00403E5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FA18F592AE446EA00403E5B /* PBXTargetDependency */,
+			);
+			name = CounterFeatureTests;
+			productName = CounterFeatureTests;
+			productReference = 4FA18F542AE446EA00403E5B /* CounterFeatureTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -109,6 +158,10 @@
 				TargetAttributes = {
 					4F2EF51F2AE3B05A0048634E = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					4FA18F532AE446EA00403E5B = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 4F2EF51F2AE3B05A0048634E;
 					};
 				};
 			};
@@ -129,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				4F2EF51F2AE3B05A0048634E /* Counter */,
+				4FA18F532AE446EA00403E5B /* CounterFeatureTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +194,13 @@
 			files = (
 				4F2EF52B2AE3B05B0048634E /* Preview Assets.xcassets in Resources */,
 				4F2EF5282AE3B05B0048634E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FA18F522AE446EA00403E5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +217,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FA18F502AE446EA00403E5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FA18F572AE446EA00403E5B /* CounterFeatureTests.swift in Sources */,
+				4FA18F5D2AE4476000403E5B /* CounterFeature.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FA18F592AE446EA00403E5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F2EF51F2AE3B05A0048634E /* Counter */;
+			targetProxy = 4FA18F582AE446EA00403E5B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4F2EF52C2AE3B05B0048634E /* Debug */ = {
@@ -338,6 +416,50 @@
 			};
 			name = Release;
 		};
+		4FA18F5A2AE446EA00403E5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5UNW2D34P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oldstar.CounterFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
+			};
+			name = Debug;
+		};
+		4FA18F5B2AE446EA00403E5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H5UNW2D34P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.oldstar.CounterFeatureTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Counter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Counter";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -355,6 +477,15 @@
 			buildConfigurations = (
 				4F2EF52F2AE3B05B0048634E /* Debug */,
 				4F2EF5302AE3B05B0048634E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FA18F5C2AE446EA00403E5B /* Build configuration list for PBXNativeTarget "CounterFeatureTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FA18F5A2AE446EA00403E5B /* Debug */,
+				4FA18F5B2AE446EA00403E5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
