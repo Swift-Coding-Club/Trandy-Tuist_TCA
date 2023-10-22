@@ -16,6 +16,8 @@
 		7FEC1C052AE4FE2000A355C0 /* Your_first_featureUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC1C042AE4FE2000A355C0 /* Your_first_featureUITestsLaunchTests.swift */; };
 		7FEC1C132AE4FE7100A355C0 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 7FEC1C122AE4FE7100A355C0 /* ComposableArchitecture */; };
 		7FEC1C182AE4FED100A355C0 /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC1C172AE4FED100A355C0 /* CounterFeature.swift */; };
+		7FEC1C1C2AE5045E00A355C0 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC1C1B2AE5045E00A355C0 /* API.swift */; };
+		7FEC1C1F2AE509FB00A355C0 /* Your_first_featureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEC1BF82AE4FE2000A355C0 /* Your_first_featureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,7 @@
 		7FEC1C022AE4FE2000A355C0 /* Your_first_featureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Your_first_featureUITests.swift; sourceTree = "<group>"; };
 		7FEC1C042AE4FE2000A355C0 /* Your_first_featureUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Your_first_featureUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7FEC1C172AE4FED100A355C0 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		7FEC1C1B2AE5045E00A355C0 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 		7FEC1BE52AE4FE1F00A355C0 /* Your first feature */ = {
 			isa = PBXGroup;
 			children = (
+				7FEC1C1A2AE5045200A355C0 /* Domain */,
 				7FEC1C152AE4FE9900A355C0 /* Application */,
 				7FEC1C192AE4FF6900A355C0 /* Resources */,
 				7FEC1C162AE4FEC000A355C0 /* Feature */,
@@ -164,6 +168,14 @@
 				7FEC1BED2AE4FE2000A355C0 /* Preview Content */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7FEC1C1A2AE5045200A355C0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7FEC1C1B2AE5045E00A355C0 /* API.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +316,8 @@
 			files = (
 				7FEC1C182AE4FED100A355C0 /* CounterFeature.swift in Sources */,
 				7FEC1BE92AE4FE1F00A355C0 /* ContentView.swift in Sources */,
+				7FEC1C1F2AE509FB00A355C0 /* Your_first_featureTests.swift in Sources */,
+				7FEC1C1C2AE5045E00A355C0 /* API.swift in Sources */,
 				7FEC1BE72AE4FE1F00A355C0 /* Your_first_featureApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
