@@ -47,6 +47,7 @@
 		84E625CA2AE4D934007738D1 /* TCAEssentialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAEssentialUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		84E625DA2AE4EA3A007738D1 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		84E625DE2AE4EA60007738D1 /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
+		84E625E02AE4FE94007738D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +99,7 @@
 		84E625AC2AE4D933007738D1 /* TCAEssential */ = {
 			isa = PBXGroup;
 			children = (
+				84E625E02AE4FE94007738D1 /* Info.plist */,
 				84E625DD2AE4EA58007738D1 /* Reducer */,
 				84E625DC2AE4EA46007738D1 /* View */,
 				84E625AD2AE4D933007738D1 /* TCAEssentialApp.swift */,
@@ -453,6 +455,7 @@
 				DEVELOPMENT_TEAM = M527AM6YJ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAEssential/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -482,6 +485,7 @@
 				DEVELOPMENT_TEAM = M527AM6YJ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TCAEssential/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
