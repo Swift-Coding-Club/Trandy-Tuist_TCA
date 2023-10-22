@@ -27,7 +27,7 @@ struct CounterFeature: Reducer {
     
     enum CancelID { case timer }
     
-    //MARK: -  시간 기반 비동기성에 대한 종속성을 제어하기 위한 약간의 사전 작업을 통해 이제 결정론적으로 즉시 통과하는 매우 간단한 테스트를 작성할 수 있습니다.
+    //MARK: - 시간 기반 비동기성에 대한 종속성을 제어하기 위한 약간의 사전 작업을 통해 이제 결정론적으로 즉시 통과하는 매우 간단한 테스트를 작성할 수 있습니다.
     @Dependency(\.continuousClock) var clock
     
     @Dependency(\.numberFact) var numberFact
