@@ -9,9 +9,11 @@ import SwiftUI
 import ComposableArchitecture
 
 struct ContentView: View {
-    //MARK: -  관찰자
+    //MARK:  store: feature의 runtime을 represent, action을 처리하고 effect를 실행하고 data를 줄 수 있음
+    
     let store: StoreOf<CounterFeature>
     var body: some View {
+        // store을 바로 접근 못하기 때문에 withViewStore로 감싸서 접근, 이 때 state가 equtable해야 함
         WithViewStore(self.store, observe: {$0}) { viewStore in
             VStack {
                 Text("\(viewStore.count)")

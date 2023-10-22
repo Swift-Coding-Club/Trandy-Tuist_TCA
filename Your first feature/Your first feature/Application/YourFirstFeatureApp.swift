@@ -1,5 +1,5 @@
 //
-//  Your_first_featureApp.swift
+//  YourFirstFeatureApp.swift
 //  Your first feature
 //
 //  Created by 서원지 on 10/22/23.
@@ -9,7 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 
 @main
-struct Your_first_featureApp: App {
+struct YourFirstFeatureApp: App {
     static let store = Store(initialState: CounterFeature.State()) {
         CounterFeature()
             ._printChanges()
@@ -18,7 +18,7 @@ struct Your_first_featureApp: App {
     var body: some Scene {
         WindowGroup {
             
-            ContentView(store: Your_first_featureApp.store)
+            ContentView(store: YourFirstFeatureApp.store)
         }
     }
 }
