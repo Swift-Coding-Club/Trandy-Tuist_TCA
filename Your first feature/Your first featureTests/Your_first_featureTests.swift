@@ -1,14 +1,13 @@
 //
-//  YourFirstFeatureTests.swift
-//  YourFirstFeatureTests
+//  Your_first_featureTests.swift
+//  Your first featureTests
 //
-//  Created by 현수빈 on 10/22/23.
+//  Created by 서원지 on 10/22/23.
 //
 
 import XCTest
-@testable import YourFirstFeature
 
-final class YourFirstFeatureTests: XCTestCase {
+final class Your_first_featureTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -28,7 +27,7 @@ final class YourFirstFeatureTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

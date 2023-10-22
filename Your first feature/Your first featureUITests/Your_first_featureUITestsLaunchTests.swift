@@ -1,13 +1,13 @@
 //
-//  YourFirstFeatureUITestsLaunchTests.swift
-//  YourFirstFeatureUITests
+//  Your_first_featureUITestsLaunchTests.swift
+//  Your first featureUITests
 //
-//  Created by 현수빈 on 10/22/23.
+//  Created by 서원지 on 10/22/23.
 //
 
 import XCTest
 
-final class YourFirstFeatureUITestsLaunchTests: XCTestCase {
+final class Your_first_featureUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

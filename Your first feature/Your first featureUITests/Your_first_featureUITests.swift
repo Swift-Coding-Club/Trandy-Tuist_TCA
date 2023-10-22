@@ -1,13 +1,13 @@
 //
-//  YourFirstFeatureUITests.swift
-//  YourFirstFeatureUITests
+//  Your_first_featureUITests.swift
+//  Your first featureUITests
 //
-//  Created by 현수빈 on 10/22/23.
+//  Created by 서원지 on 10/22/23.
 //
 
 import XCTest
 
-final class YourFirstFeatureUITests: XCTestCase {
+final class Your_first_featureUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
