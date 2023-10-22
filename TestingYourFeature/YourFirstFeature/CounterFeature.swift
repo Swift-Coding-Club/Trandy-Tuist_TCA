@@ -30,6 +30,9 @@ struct CounterFeature: Reducer {
     
     enum CancelID { case timer }
     
+    @Dependency(\.continuousClock) var clock // add a dependency on a continuous clock to the reduce
+    @Dependency(\.numberFact) var numberFact
+    
     // The reduce method takes State as an argument and it is marked as inout. This means you can make any mutations you want directly to the state. There is no need to make a copy of the state just to return it.
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
         switch action {
@@ -43,17 +46,12 @@ struct CounterFeature: Reducer {
             state.fact = nil
             return .none
             
-            // MARK: - Section 2 performing a network request
         case .factButtonTapped:
             state.fact = nil
             state.isLoading = true
             // This provides you with an asynchronous context to perform any kind of work you want, as well as a handle (send) for sending actions back into the system.
             return .run { [count = state.count] send in
-                let (data, _) = try await URLSession.shared
-                    .data(from: URL(string: "http://numbersapi.com/\(count)")!)
-                let fact = String(decoding: data, as: UTF8.self)
-                // state.fact = fact <- However, it is not possible to then mutate the state.fact in the effect after fetching the data from the network. This is strictly enforced by the compiler since sendable closures cannot capture inout state. This is showing how the library chooses to separate the nice, simple and pure state mutations that reducers perform from the messy, complex effects.
-                await send(.factResponse(fact))
+                try await send(.factResponse(self.numberFact.fetch(count)))
             }
             
         case let .factResponse(fact):
@@ -83,7 +81,9 @@ struct CounterFeature: Reducer {
 
 
 
-extension CounterFeature.State: Equatable {}
+extension CounterFeature.State: Equatable {} // withViewStore을 위해 추가
+
+extension CounterFeature.Action: Equatable {} // test에서 receive를 쓰기 위해 만족
 
 struct CounterView: View {
     // store: feature의 runtime을 represent, action을 처리하고 effect를 실행하고 data를 줄 수 있음
@@ -116,7 +116,6 @@ struct CounterView: View {
                     .background(Color.black.opacity(0.1))
                     .cornerRadius(10)
                 }
-                // MARK: - section 1: fact 버튼 추가
                 Button("Fact") {
                     viewStore.send(.factButtonTapped)
                 }
@@ -135,7 +134,6 @@ struct CounterView: View {
                 }
                 
                 
-                // MARK: - section 3: timer 추가
                 Button(viewStore.isTimerRunning ? "Stop timer" : "Start timer") {
                     viewStore.send(.toggleTimerButtonTapped)
                 }
