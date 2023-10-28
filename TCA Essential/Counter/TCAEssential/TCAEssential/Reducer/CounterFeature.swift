@@ -65,7 +65,7 @@ struct CounterFeature: Reducer {
             
         case .toggleTimerButtonTapped:
             state.isTimerRunning.toggle()
-            if state.isTimerRunning {햐
+            if state.isTimerRunning {
                 return .run { send in
                     while true {
                         //1초씩 이벤트를 주는 ㅂ아법
