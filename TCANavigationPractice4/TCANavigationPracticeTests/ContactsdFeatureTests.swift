@@ -73,4 +73,3 @@ final class ContactsFeatureTests2: XCTestCase {
            }
      }
 }
-

@@ -19,7 +19,9 @@
 		D6BF64F12AECCAD70042A3E9 /* ContactsFeature+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF64F02AECCAD70042A3E9 /* ContactsFeature+.swift */; };
 		D6BF64FC2AECD1710042A3E9 /* TCANavigationPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF64FB2AECD1710042A3E9 /* TCANavigationPracticeTests.swift */; };
 		D6BF65032AECD3870042A3E9 /* ContactsdFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF65022AECD3870042A3E9 /* ContactsdFeatureTests.swift */; };
-		D6BF65092AECD71A0042A3E9 /* AlertState+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF65082AECD71A0042A3E9 /* AlertState+.swift */; };
+		D6BF65052AECD60A0042A3E9 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF65042AECD60A0042A3E9 /* ContactDetailFeature.swift */; };
+		D6BF65072AECD6320042A3E9 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF65062AECD6320042A3E9 /* ContactDetailView.swift */; };
+		D6BF650B2AECD7630042A3E9 /* Alert+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BF650A2AECD7630042A3E9 /* Alert+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,9 @@
 		D6BF64F92AECD1710042A3E9 /* TCANavigationPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCANavigationPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BF64FB2AECD1710042A3E9 /* TCANavigationPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCANavigationPracticeTests.swift; sourceTree = "<group>"; };
 		D6BF65022AECD3870042A3E9 /* ContactsdFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsdFeatureTests.swift; sourceTree = "<group>"; };
-		D6BF65082AECD71A0042A3E9 /* AlertState+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertState+.swift"; sourceTree = "<group>"; };
+		D6BF65042AECD60A0042A3E9 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
+		D6BF65062AECD6320042A3E9 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		D6BF650A2AECD7630042A3E9 /* Alert+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,9 @@
 				D6BF64EE2AECC2FA0042A3E9 /* AddContactView.swift */,
 				D6BF64EA2AECC0310042A3E9 /* AddContactFeature.swift */,
 				D6BF64F02AECCAD70042A3E9 /* ContactsFeature+.swift */,
-				D6BF65082AECD71A0042A3E9 /* AlertState+.swift */,
+				D6BF65042AECD60A0042A3E9 /* ContactDetailFeature.swift */,
+				D6BF65062AECD6320042A3E9 /* ContactDetailView.swift */,
+				D6BF650A2AECD7630042A3E9 /* Alert+.swift */,
 			);
 			path = TCANavigationPractice;
 			sourceTree = "<group>";
@@ -226,12 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6BF65052AECD60A0042A3E9 /* ContactDetailFeature.swift in Sources */,
 				D6BF64DA2AECBF5A0042A3E9 /* ContentView.swift in Sources */,
 				D6BF64D82AECBF5A0042A3E9 /* TCANavigationPracticeApp.swift in Sources */,
 				D6BF64E62AECBF750042A3E9 /* ContactsFeature.swift in Sources */,
 				D6BF64EF2AECC2FA0042A3E9 /* AddContactView.swift in Sources */,
 				D6BF64ED2AECC2F00042A3E9 /* ContactsView.swift in Sources */,
-				D6BF65092AECD71A0042A3E9 /* AlertState+.swift in Sources */,
+				D6BF650B2AECD7630042A3E9 /* Alert+.swift in Sources */,
+				D6BF65072AECD6320042A3E9 /* ContactDetailView.swift in Sources */,
 				D6BF64EB2AECC0310042A3E9 /* AddContactFeature.swift in Sources */,
 				D6BF64F12AECCAD70042A3E9 /* ContactsFeature+.swift in Sources */,
 			);
