@@ -16,14 +16,17 @@ struct StandupListView: View {
         WithViewStore(store, observe: \.standups) { viewStore in
             List {
                 ForEach(viewStore.state) { standup in
-                    
+                    CardView(standup: standup)
+                        .listRowBackground(standup.theme.mainColor)
                 }
             }
         }
         .navigationTitle("Daily Standups")
         .toolbar {
             ToolbarItem {
-                Button("Add") { }
+                Button("Add") {
+                    store.send(.addButtonTapped)
+                }
             }
         }
     }
@@ -31,6 +34,10 @@ struct StandupListView: View {
 
 #Preview {
     NavigationStack {
-        StandupListView()
+        StandupListView(
+            store: Store(initialState: StandupListFeature.State()) {
+                StandupListFeature()
+            }
+        )
     }
 }
