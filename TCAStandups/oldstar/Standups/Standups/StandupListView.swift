@@ -7,10 +7,18 @@
 
 import SwiftUI
 
+import ComposableArchitecture
+
 struct StandupListView: View {
+    let store: StoreOf<StandupListFeature>
+    
     var body: some View {
-        List {
-            
+        WithViewStore(store, observe: \.standups) { viewStore in
+            List {
+                ForEach(viewStore.state) { standup in
+                    
+                }
+            }
         }
         .navigationTitle("Daily Standups")
         .toolbar {
