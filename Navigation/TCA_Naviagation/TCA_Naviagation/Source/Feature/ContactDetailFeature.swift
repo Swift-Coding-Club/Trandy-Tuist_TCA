@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct ContactDetailFeature: Reducer {
+    // 1. contactDetail 추가
     struct State: Equatable {
         let contact: Contact
     }
