@@ -8,12 +8,13 @@
 import ProjectDescription
 
 public extension Project {
-    enum Environment {
+    public enum Environment {
         public static let appName = "BeatCounter"
         public static let organizationName = "" // and so on
         public static let deploymentTarget = DeploymentTarget.iOS(targetVersion: "17.0", devices: [.iphone, .ipad])
         public static let bundlePrefix = "com." // and so on
-//        public static let watchDeploymentTarget = DeploymentTarget.watchOS(targetVersion: "10.0")
+        public static let appVersion = "1.0.0"
+        public static let mainBundleId = "com.BeatCounter"
     }
 }
 
@@ -31,7 +32,7 @@ public extension Project {
         sources: SourceFilesList = .sources,
         resources: ResourceFileElements? = nil,
         infoPlist: InfoPlist = .default,
-        entitlements: Path? = nil,
+        entitlements: Entitlements? = nil,
         schemes: [Scheme] = []
     ) -> Project {
         let appTarget = Target(
@@ -62,7 +63,5 @@ public extension Project {
 }
 
 public extension SourceFilesList {
-    static let sources: SourceFilesList = "Sources/"
+    static let sources: SourceFilesList = "Sources/**"
 }
-
-
