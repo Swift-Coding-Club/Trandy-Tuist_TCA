@@ -6,7 +6,8 @@ let localHelper = LocalHelper(name: "MyPlugin")
 
 // Creates our project using a helper function defined in ProjectDescriptionHelpers
 let project = Project.makeAppModule(
-    bundleId: "Networking",
+    name: "Networking",
+    bundleId: ".Networking",
     product: .staticFramework,
     settings: .settings(),
     dependencies: []

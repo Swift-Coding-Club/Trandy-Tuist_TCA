@@ -1,16 +1,18 @@
 //
-//  WorkSpace.swift
-//  ProjectDescriptionHelpers
+//  Workspace.swift
+//  Manifests
 //
-//  Created by 염성훈 on 12/10/23.
+//  Created by 서원지 on 12/17/23.
 //
 
-import Foundation
 import ProjectDescription
 import MyPlugin
 
+let localHelper = LocalHelper(name: "MyPlugin")
 
-let workSpace = Workspace(
-    name: Project.Environment.appName,
-    projects: ["Projects/**"]
-)
+let workspace = Workspace(
+name: Project.Environment.appName,
+projects: [
+    "Projects/**"
+])
+

@@ -1,0 +1,16 @@
+import Foundation
+import ProjectDescription
+import MyPlugin
+
+let localHelper = LocalHelper(name: "MyPlugin")
+
+let project = Project.makeAppModule(
+name: "{{ name }}",
+bundleId: .appBundleID(name: ".{{name}}"),
+product: .staticFramework,
+setting:  .settings(),
+dependencies: [
+        
+],
+sources: ["Sources/**"]
+)

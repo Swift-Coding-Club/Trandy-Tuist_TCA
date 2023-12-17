@@ -8,5 +8,7 @@ let localHelper = LocalHelper(name: "MyPlugin")
 let project = Project.makeAppModule(
     bundleId: Project.Environment.appName,
     product: .app,
-    settings: .settings()
+    packages: [],
+    settings: .settings(),
+    dependencies: []
 )
