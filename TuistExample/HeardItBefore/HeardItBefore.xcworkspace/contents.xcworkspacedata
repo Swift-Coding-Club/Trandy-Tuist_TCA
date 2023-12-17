@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Projects"
+      name = "Projects">
+      <Group
+         location = "group:App"
+         name = "App">
+         <FileRef
+            location = "group:HeardItBefore/HeardItBefore.xcodeproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Feature"
+         name = "Feature">
+         <FileRef
+            location = "group:HelloFeature/HelloFeature.xcodeproj">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>
