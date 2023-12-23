@@ -10,5 +10,9 @@ let project = Project.makeAppModule(
     product: .app,
     packages: [],
     settings: .settings(),
-    dependencies: []
+    dependencies: [
+        .package(product: "ComposableArchitecture", type: .macro)
+    
+    
+    ]
 )

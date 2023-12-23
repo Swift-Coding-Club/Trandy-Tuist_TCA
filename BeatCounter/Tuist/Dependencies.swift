@@ -9,7 +9,7 @@ import Foundation
 import ProjectDescription
 
 let swiftpackage = SwiftPackageManagerDependencies([
-    
+    .remote(url: "http://github.com/pointfreeco/swift-composable-architecture", requirement: .exact("1.5.0")),
 ])
 
 let dependencie = Dependencies(
