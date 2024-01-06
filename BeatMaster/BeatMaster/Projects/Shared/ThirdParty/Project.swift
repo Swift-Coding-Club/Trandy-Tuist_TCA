@@ -10,7 +10,7 @@ let project = Project.makeAppModule(
     product: .staticFramework,
     settings:  .appBaseSetting,
     dependencies: [
-        .package(product: "ComposableArchitecture", type: .macro)
+        .SPM.ComposableArchitecture
         
         
     ],

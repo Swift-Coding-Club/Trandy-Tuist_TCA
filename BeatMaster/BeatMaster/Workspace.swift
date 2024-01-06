@@ -2,9 +2,10 @@
 //  Workspace.swift
 //  Manifests
 //
-//  Created by 서원지 on 12/17/23.
+//  Created by 서원지 on 1/6/24.
 //
 
+import Foundation
 import ProjectDescription
 import MyPlugin
 
@@ -15,4 +16,3 @@ name: Project.Environment.appName,
 projects: [
     "Projects/**"
 ])
-
