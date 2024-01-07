@@ -18,7 +18,8 @@ let project = Project.makeAppModule(
     settings: .appMainSetting,
     dependencies: [
         .Core(implements: .Core),
-        .Shared(implements: .Shareds)
+        .Shared(implements: .Shareds),
+        .Networking(implements: .Networkings)
     
     ],
     sources: ["Sources/**"],

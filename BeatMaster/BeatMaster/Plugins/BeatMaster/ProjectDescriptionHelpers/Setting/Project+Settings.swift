@@ -29,6 +29,7 @@ extension Settings {
             .debug(name: .debug, settings: [
                 "PRODUCT_NAME" : "\(Project.Environment.appName)",
                 "DISPLAY_NAME" : "\(Project.Environment.appName)",
+                "PROVISIONING_PROFILE_SPECIFIER": "BeatMaster",
                 "OTHER_LDFLAGS": [
                       "-all_load", // Set the strip style to non-global symbols
                 ],
@@ -39,6 +40,7 @@ extension Settings {
             .debug(name: "Dev", settings: [
                 "PRODUCT_NAME" : "\(Project.Environment.appDevName)",
                 "DISPLAY_NAME" : "\(Project.Environment.appDevName)",
+                "PROVISIONING_PROFILE_SPECIFIER": "BeatMaster",
                 "OTHER_LDFLAGS": [
                      "-all_load", // Set the strip style to non-global symbols
                 ],
@@ -51,6 +53,7 @@ extension Settings {
                 "DEVELOPMENT_ASSET_PATHS": "\"Resources/Preview Content\"",
                 "PRODUCT_NAME" : "\(Project.Environment.appName)" ,
                 "DISPLAY_NAME" : "\(Project.Environment.appName)" ,
+                "PROVISIONING_PROFILE_SPECIFIER": "BeatMaster",
                 "OTHER_LDFLAGS": [
                     "-all_load",
                 ],
@@ -65,12 +68,13 @@ extension Settings {
         base: ["PRODUCT_NAME": "\(Project.Environment.appName)",
                "MARKETING_VERSION": .string(.appVersion()),
                "CURRENT_PROJECT_VERSION": .string(.appBuildVersion()),
-//               "CODE_SIGN_STYLE": "Automatic",
+               "CODE_SIGN_STYLE": "Automatic",
                "DEVELOPMENT_TEAM": "\(Project.Environment.organizationTeamId)",
                "DEBUG_INFORMATION_FORMAT": "DWARF with dSYM File"],
         configurations: [
             .debug(name: .debug, settings: [
                 "PRODUCT_NAME": "\(Project.Environment.appName)",
+                "PROVISIONING_PROFILE_SPECIFIER": "BeatMaster",
                 "OTHER_LDFLAGS": [
                       "-all_load", // Set the strip style to non-global symbols
                 ],
@@ -80,6 +84,7 @@ extension Settings {
             ]),
             .release(name: .release, settings: [
                 "PRODUCT_NAME": "\(Project.Environment.appName)",
+                "PROVISIONING_PROFILE_SPECIFIER": "BeatMaster",
                 "OTHER_LDFLAGS": [
                     "-all_load",
                 ],
