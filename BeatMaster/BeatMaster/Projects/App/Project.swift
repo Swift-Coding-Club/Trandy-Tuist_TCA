@@ -16,6 +16,11 @@ let project = Project.makeAppModule(
     bundleId: .mainBundleID(),
     product: .app,
     settings: .appMainSetting,
+    dependencies: [
+        .Core(implements: .Core),
+        .Shared(implements: .Shareds)
+    
+    ],
     sources: ["Sources/**"],
     resources: ["Resources/**"],
     infoPlist: .file(path: "Support/Info.plist"),

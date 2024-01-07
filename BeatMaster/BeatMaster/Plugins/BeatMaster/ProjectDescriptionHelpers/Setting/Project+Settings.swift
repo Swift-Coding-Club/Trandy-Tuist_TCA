@@ -20,7 +20,7 @@ extension Settings {
 //                "ASSOCIATED_DOMAINS": "applinks:PingPong.page.link",
                 "CURRENT_PROJECT_VERSION": .string(.appBuildVersion()),
                 "CODE_SIGN_IDENTITY": "iPhone Developer",
-                "CODE_SIGN_STYLE": "Automatic",
+//                "CODE_SIGN_STYLE": "Automatic",
                 "DEVELOPMENT_TEAM": "\(Project.Environment.organizationTeamId)",
                 "VERSIONING_SYSTEM": "apple-generic",
                 "DEBUG_INFORMATION_FORMAT": "DWARF with dSYM File",
@@ -65,7 +65,7 @@ extension Settings {
         base: ["PRODUCT_NAME": "\(Project.Environment.appName)",
                "MARKETING_VERSION": .string(.appVersion()),
                "CURRENT_PROJECT_VERSION": .string(.appBuildVersion()),
-               "CODE_SIGN_STYLE": "Automatic",
+//               "CODE_SIGN_STYLE": "Automatic",
                "DEVELOPMENT_TEAM": "\(Project.Environment.organizationTeamId)",
                "DEBUG_INFORMATION_FORMAT": "DWARF with dSYM File"],
         configurations: [
